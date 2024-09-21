@@ -6,7 +6,7 @@
     <title>Tour of dom</title>
     <link rel="stylesheet" href="styles/styles.css">
     <style>
-        li{
+        .fruits-container li {
             color: tomato;
         }
         #fruits-title{
@@ -32,7 +32,7 @@
                 <li>DOM de re baba</li>
             </ul>
         </section>
-        <section>
+        <section class="fruits-container">
             <h1 id="fruits-title">Fruits I like</h1>
             <ul>
                 <li>Apple</li>
@@ -64,13 +64,25 @@
             // console.log(h1.innerText);
         }
 
+        // option-2: getElementById
         const fruitsTitle = document.getElementById('fruits-title');
         fruitsTitle.innerText = 'fruits title changed by JS';
 
+        // option-3: getElementsByClassName
         const places = document.getElementsByClassName('important-places');
         for (const place of places) {
-            console.log(place.innerText);
+            // console.log(place.innerText);
         }
+
+        // option-4: querySelector
+
+        // option-5: querySelectorAll
+        const someLi = document.querySelectorAll('.fruits-container li');
+        // console.log(someLi);
+        for(const li of someLi){
+            // console.log(li.innerText);
+        }
+        
     </script>
 </body>
 </html>
