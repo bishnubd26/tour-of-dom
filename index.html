@@ -9,25 +9,46 @@
         li{
             color: tomato;
         }
+        #fruits-title{
+            color: black;
+        }
+        .important-places{
+            color:blueviolet;   
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>Welcome to my DOM</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima aliquam illo hic natus voluptatum distinctio quod iure quae pariatur laborum, veritatis minus accusamus expedita nobis sunt deserunt saepe obcaecati. Dolorem!</p>
     </header>
     <main>
-        <h1>My Awesome DOM de baba</h1>
-        <ul>
-            <li>Jalali Set</li>
-            <li>Shafayet</li>
-            <li>bonobash</li>
-            <li>DOM de re baba</li>
-        </ul>
-        <ul>
-            <li>Apple</li>
-            <li>Banana</li>
-            <li>Carrot</li>
-        </ul>
+        <section>
+            <h1>My Awesome DOM de baba</h1>
+            <ul>
+                <li>Jalali Set</li>
+                <li>Shafayet</li>
+                <li>bonobash</li>
+                <li>DOM de re baba</li>
+            </ul>
+        </section>
+        <section>
+            <h1 id="fruits-title">Fruits I like</h1>
+            <ul>
+                <li>Apple</li>
+                <li>Banana</li>
+                <li>Carrot</li>
+            </ul>
+        </section>
+        <section>
+            <h1 id="places-title">Places I like to visit</h1>
+            <ul>
+                <li class="important-places">Soondarban</li>
+                <li class="important-places">bandorban</li>
+                <li class="important-places">Kataban</li>
+                <li>shalbon</li>
+            </ul>
+        </section>
     </main>
     <script src="js/dom.js"></script>
     <script>
@@ -40,7 +61,15 @@
         // option-1: getElementsByTagName
         const allHeadings = document.getElementsByTagName('h1');
         for (const h1 of allHeadings) {
-            console.log(h1.innerText);
+            // console.log(h1.innerText);
+        }
+
+        const fruitsTitle = document.getElementById('fruits-title');
+        fruitsTitle.innerText = 'fruits title changed by JS';
+
+        const places = document.getElementsByClassName('important-places');
+        for (const place of places) {
+            console.log(place.innerText);
         }
     </script>
 </body>
